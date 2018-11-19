@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto';
+}
+.dorothea { 
+    background-image: url("/images/piano.jpg");
+    height: 70%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(61, 14, 216, 0.4); /* Black w/opacity/see-through */
+  color: #faf6d3;
+  font-weight: bold;
+  font-size: 80px;
+  border: 10px solid #faf6d3;
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  z-index: 2;
+  width: 900px;
+  padding: 10px;
+  text-align: center;
+}
+.sidenav {
+    font-family: monospace;
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    z-index: 1;
+    top: 0px;
+    left: 0;
+    background-color: #020038;
+    overflow-x: hidden;
+    padding-top: .1%;
+}
+
+.sidenav a {
+    padding: 30px 6px 6px 17px;
+    text-decoration: none;
+    font-size: 13px;
+    color: #faf6d3;
+    display: block;
+    -ms-transform: rotate(350eg); /* IE 9 */
+    -webkit-transform: rotate(350deg); /* Safari 3-8 */
+    transform: rotate(350deg);
+}
+
+.sidenav a:hover {
+    color: #ffc8c8;
+}
+.sidenav a:hover::before {
+    content: '[';
+}
+.sidenav a:hover::after {
+    content: ']';
+}
+.main {
+    margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 10px;}
+  .sidenav a {font-size: 18px;}
+}
+
+* {
+  box-sizing: border-box;
+}
+
+$redColor: #ffc8c8;
+$blueColor:#faf6d3;
+
+.flex-center {
+  width: 100%;
+  min-height: 50vh;
+  
+  background: #000;
+  
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.icon-3d {
+  padding: 10px;
+  -webkit-animation: icon3d 200ms 10;
+  animation: icon3d 200ms 10;
+  color: #fff;
+  &:hover {
+    -webkit-animation: icon3d 200ms infinite;
+          animation: icon3d 200ms infinite;
+  }
+}
+
+@keyframes icon3d {
+  0% {
+    text-shadow: 5px 4px $redColor, -5px -6px $blueColor;
+  }
+  25% {
+    text-shadow: -5px -6px $redColor, 5px 4px $blueColor;
+  }
+  50% {
+    text-shadow: 5px -4px $redColor, -8px 4px $blueColor;
+  }
+  75% {
+    text-shadow: -8px -4px $redColor, -5px -4px $blueColor;
+  }
+  100% {
+    text-shadow: -5px 0 $redColor, 5px -4px $blueColor;
+  }
+}
+</style>
+</head>
+</html>
